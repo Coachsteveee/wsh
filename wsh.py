@@ -8,7 +8,7 @@ def load_data():
         A pandas dataframe containing the GW4 data.
     """
 
-    df = pd.read_excel("GW4.xlsx").drop(columns=['Unnamed: 0'])
+    df = pd.read_excel("GW5.xlsx").drop(columns=['Unnamed: 0'])
     return df
 
 def main():
@@ -16,7 +16,7 @@ def main():
     in a Streamlit dataframe. The dataframe is displayed with its
     index hidden and a fixed height of 900px, and it is allowed
     to use the full width of the Streamlit app."""
-    st.title('Game Week 4')
+    st.title('Game Week 5')
     
     data = load_data()
     st.dataframe(data, hide_index=True, height=560, use_container_width=True)
