@@ -124,7 +124,7 @@ def add_coming_soon_section():
 
 def main():
     """Main application function that displays the GameWeek data with enhanced features."""
-    st.set_page_config(layout="wide", page_title="Odds Dashboard")
+    st.set_page_config(layout="wide", page_title="Predictions Dashboard")
     
     st.title('Betting Odds Dashboard')
     
