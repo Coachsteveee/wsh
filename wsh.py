@@ -4,8 +4,8 @@ import plotly.express as px
 import numpy as np
 
 def load_data():
-    """Loads the GW8 data from an Excel file and returns it as a pandas dataframe."""
-    df = pd.read_excel("all_matches.xlsx")
+    """Loads the GW data from an Excel file and returns it as a pandas dataframe."""
+    df = pd.read_excel("current_gw_fixtures.xlsx")
     return df
 
 def style_dataframe(df):
