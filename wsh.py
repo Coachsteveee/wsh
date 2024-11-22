@@ -58,7 +58,7 @@ def add_search_filters(data):
 
 def add_insights(data):
     """Add statistical insights and analysis"""
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     
     with col1:
         st.markdown("**High Impact Matches (Above Average xG)**")
@@ -69,6 +69,11 @@ def add_insights(data):
         st.markdown("**High Card Potential (Above Average Bookings)**")
         high_cards = data[data['ex_bookings'] > data['ex_bookings'].mean()]
         st.dataframe(high_cards[['fixture', 'ex_bookings']].sort_values('ex_bookings', ascending=False))
+        
+    with col3:
+        st.markdown("**High Corners Potential (Above Average Corners)**")
+        high_corners = data[data['ex_corners'] < data['ex_corners'].mean()]
+        st.dataframe(high_corners[['fixture', 'ex_corners']].sort_values('ex_corners', ascending=False))
 
 def create_visualizations(df):
     """Creates visualization charts for the data."""
